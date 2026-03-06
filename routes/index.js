@@ -1,8 +1,14 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const productController = require("../controllers/productController");
-//Route to get all products
-router.get("/products", productController.getAllGadgets);
-//create
-router.post("/products", productController.createProducts);
+const enrollmentController = require('../controllers/userController');
+
+//Route to get all users
+router.get('/enrollment', enrollmentController.getAllUsers);
+
+
+//Routes to create
+router.post("/enrollment", enrollmentController.createUser);
+
+
+
 module.exports = router;
